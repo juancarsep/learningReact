@@ -1,5 +1,9 @@
 import "./App.css";
-export function TwitterFollorCard( {userName, name}) {
+export function TwitterFollorCard( {formtUsername,userName, name}) {
+
+
+  const addAt = (username) => `@${username}`
+
   return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
@@ -10,7 +14,7 @@ export function TwitterFollorCard( {userName, name}) {
         />
         <div className="tw-followCard-info">
           <strong>{name}</strong>
-          <span className="tw-followCard-infoUserName">@{userName}</span>
+          <span className="tw-followCard-infoUserName">{formtUsername(userName)}</span>
         </div>
       </header>
       <aside>

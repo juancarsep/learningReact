@@ -5,9 +5,11 @@ import { TwitterFollorCard } from "./TwitterFollowCard.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const formatUsername = (username) => `@$username`;
+
 root.render(
   <section className="app">
-    <TwitterFollorCard userName={"juancarsep"} name={"Juan Carballo"} />
-    <TwitterFollorCard userName={"carballosepejuan"} name={"Carballo Juan"} />
+    <TwitterFollorCard formtUsername={formatUsername} isFollowing={false} userName={"juancarsep"} name={"Juan Carballo"} />
+    <TwitterFollorCard isFollowing={true} userName={"carballosepejuan"} name={"Carballo Juan"} />
   </section>
 );
